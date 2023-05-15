@@ -1,32 +1,37 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import { ReactNode } from "react";
+import Head from "next/head";
+import { AppProps } from "next/app";
+import { css } from "@emotion/react";
+import Header from "./Header";
+import Footer from "./Footer";
 
-type Props = {
-  children?: ReactNode
-  title?: string
+interface LayoutProps {
+  children: ReactNode;
+  pageProps: AppProps["pageProps"];
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
-      <nav>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{' '}
-        <Link href="/users">Users List</Link> |{' '}
-        <a href="/api/users">Users API</a>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
-)
+const Layout = ({ children, pageProps }: LayoutProps) => {
+  const title = pageProps?.title || "copotter";
 
-export default Layout
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <Header />
+      <main
+        css={css`
+          width: 100%;
+          min-height: 100dvh;
+        `}
+      >
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default Layout;
