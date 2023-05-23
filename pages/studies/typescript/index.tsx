@@ -1,4 +1,4 @@
-import { StudiesTemplate } from "../../../components/templates";
+import { StudiesTemplate } from '../../../components/templates';
 
 const StudiesTypescriptPage = () => {
   return <StudiesTemplate />;

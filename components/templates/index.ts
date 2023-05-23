@@ -1,3 +1,3 @@
-import StudiesTemplate from "./studies";
+import StudiesTemplate from './studies';
 
 export { StudiesTemplate };

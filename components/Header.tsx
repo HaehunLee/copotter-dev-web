@@ -1,13 +1,13 @@
-import styled from "@emotion/styled";
-import Link from "next/link";
+import styled from '@emotion/styled';
+import Link from 'next/link';
 
 const Header = () => {
   return (
     <Wrapper>
       <Nav>
-        <Link href="/">Home</Link>
+        <Link href='/'>Home</Link>
         {/* <a href="/api/studies">Users API | </a> */}
-        <Link href="/studies/typescript">Typescript</Link>
+        <Link href='/studies/typescript'>Typescript</Link>
       </Nav>
     </Wrapper>
   );

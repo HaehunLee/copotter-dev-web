@@ -1,9 +1,9 @@
-import "../styles/global.css";
-import type { AppProps } from "next/app";
+import '../styles/global.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import type { AppProps } from 'next/app';
+import { useState } from 'react';
 
-import Layout from "../components/Layout";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useState } from "react";
+import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             staleTime: 1000 * 60 * 30, // TODO: 임시
           },
         },
-      })
+      }),
   );
 
   return (

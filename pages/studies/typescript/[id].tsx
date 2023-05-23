@@ -1,10 +1,13 @@
-import { GetServerSidePropsContext } from "next";
-import { getStudyAPI } from "../../../apis/studies";
-import { QueryClient } from "@tanstack/react-query";
-import { useStudyDetail } from "../../../hooks/queries/studiesQuery";
+import { QueryClient } from '@tanstack/react-query';
+import { GetServerSidePropsContext } from 'next';
+
+import { getStudyAPI } from '../../../apis/studies';
+import { useStudyDetail } from '../../../hooks/queries/studiesQuery';
 
 const StudiesTypescriptDetailPage = () => {
   const { data } = useStudyDetail();
+
+  console.log('data', data);
 
   return <div>StudiesTypescriptDetailPage</div>;
 };
@@ -16,8 +19,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   const queryClient = new QueryClient();
 
   if (id) {
-    await queryClient.prefetchQuery(["STUDIES", "DETAIL", id], () =>
-      getStudyAPI({ id })
+    await queryClient.prefetchQuery(['STUDIES', 'DETAIL', id], () =>
+      getStudyAPI({ id }),
     );
   }
 

@@ -1,24 +1,25 @@
-import { ReactNode } from "react";
-import Head from "next/head";
-import { AppProps } from "next/app";
-import { css } from "@emotion/react";
-import Header from "./Header";
-import Footer from "./Footer";
+import { css } from '@emotion/react';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { ReactNode } from 'react';
+
+import Footer from './Footer';
+import Header from './Header';
 
 interface LayoutProps {
   children: ReactNode;
-  pageProps: AppProps["pageProps"];
+  pageProps: AppProps['pageProps'];
 }
 
 const Layout = ({ children, pageProps }: LayoutProps) => {
-  const title = pageProps?.title || "copotter";
+  const title = pageProps?.title || 'copotter';
 
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       <Header />
       <main
