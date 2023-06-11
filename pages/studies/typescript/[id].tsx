@@ -1,15 +1,23 @@
 import { QueryClient } from '@tanstack/react-query';
 import { GetServerSidePropsContext } from 'next';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
-import { getStudyAPI } from '../../../apis/studies';
+import { getStudiesDetailAPI } from '../../../apis/studies';
 import { useStudyDetail } from '../../../hooks/queries/studiesQuery';
 
 const StudiesTypescriptDetailPage = () => {
   const { data } = useStudyDetail();
 
-  console.log('data', data);
-
-  return <div>StudiesTypescriptDetailPage</div>;
+  return (
+    <div>
+      {data && (
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {data?.content}
+        </ReactMarkdown>
+      )}
+    </div>
+  );
 };
 
 export default StudiesTypescriptDetailPage;
@@ -20,7 +28,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
   if (id) {
     await queryClient.prefetchQuery(['STUDIES', 'DETAIL', id], () =>
-      getStudyAPI({ id }),
+      getStudiesDetailAPI({ id }),
     );
   }
 
