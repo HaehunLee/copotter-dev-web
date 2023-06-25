@@ -23,7 +23,57 @@ const globalStyle = ({ theme }: { theme: Theme }) => css`
 
   /* reset.css */
   * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+  }
+  *,
+  :after,
+  :before {
     box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  :root {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    cursor: default;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    -moz-tab-size: 4;
+    tab-size: 4;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  * {
     font-family: NeoDunggeunmoPro;
   }
 
@@ -33,49 +83,6 @@ const globalStyle = ({ theme }: { theme: Theme }) => css`
     height: 100%;
     scroll-behavior: smooth;
     background-color: ${theme.colors.bg};
-  }
-
-  img,
-  picture,
-  video,
-  canvas,
-  svg {
-    display: block;
-    max-width: 100%;
-  }
-  button,
-  hr {
-    background: none;
-    border: 0;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-    &:visited {
-      color: inherit;
-    }
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-  /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  /* Firefox */
-  input[type='number'] {
-    -moz-appearance: textfield;
-  }
-  textarea {
-    background-color: transparent;
   }
   /* reset.css end */
 

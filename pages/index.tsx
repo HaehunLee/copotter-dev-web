@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Button } from '#components/atoms';
+import { Button, Input, Textarea } from '#components/atoms';
 import SectionBlock from '#components/molecules/SectionBlock';
 
 const IndexPage = () => (
@@ -35,6 +35,9 @@ const IndexPage = () => (
       }
     />
     <SectionBlock title='인기글' content='열심히 해봅시다!' />
+
+    <Input placeholder='뭐 쓸건데?' />
+    <Textarea placeholder='뭐 쓸건데?' />
   </div>
 );
 
