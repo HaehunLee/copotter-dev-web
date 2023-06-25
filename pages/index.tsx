@@ -2,10 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '#components/atoms';
+import SectionBlock from '#components/molecules/SectionBlock';
 
 const IndexPage = () => (
-  <div style={{ backgroundColor: 'red', padding: 10 }}>
-    <h1>Hello Next.js 👋</h1>
+  <div
+    style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 10 }}
+  >
     <p>
       <Link href='/about'>About</Link>
     </p>
@@ -23,6 +25,16 @@ const IndexPage = () => (
     />
     <Button>취소 (C)</Button>
     <Button disabled>취소 (C)</Button>
+
+    <SectionBlock
+      title='인기글'
+      content={
+        <div>
+          <p>뭘 써나가볼까요?</p>
+        </div>
+      }
+    />
+    <SectionBlock title='인기글' content='열심히 해봅시다!' />
   </div>
 );
 

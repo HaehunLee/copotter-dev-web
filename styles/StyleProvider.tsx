@@ -32,6 +32,7 @@ const globalStyle = ({ theme }: { theme: Theme }) => css`
   #__next {
     height: 100%;
     scroll-behavior: smooth;
+    background-color: ${theme.colors.bg};
   }
 
   img,
