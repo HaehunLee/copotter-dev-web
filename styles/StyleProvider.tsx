@@ -47,6 +47,8 @@ const globalStyle = ({ theme }: { theme: Theme }) => css`
     background: none;
     border: 0;
     cursor: pointer;
+    padding: 0;
+    margin: 0;
   }
   a {
     text-decoration: none;

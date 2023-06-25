@@ -9,3 +9,13 @@ export const basicTheme: Theme = {
     white: '#FFFFFF',
   },
 };
+
+export const darkTheme: Theme = {
+  colors: {
+    primary: '#1CC800',
+    secondary: '#BFBFBF',
+    bg: '#282828',
+    black: '#242424',
+    white: '#FFFFFF',
+  },
+};
