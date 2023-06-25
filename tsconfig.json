@@ -16,6 +16,6 @@
     "incremental": true,
     "types": ["@emotion/react/types/css-prop"] // !! @emotion/css 사용 시 필요
   },
-  "include": ["svg.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["svg.d.ts", "theme.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
