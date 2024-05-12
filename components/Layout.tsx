@@ -12,7 +12,7 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, pageProps }: LayoutProps) => {
-  const title = pageProps?.title || 'copotter';
+  const title = pageProps?.title || 'Copotter | Dev';
 
   return (
     <>

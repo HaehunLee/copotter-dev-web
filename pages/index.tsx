@@ -1,44 +1,39 @@
-import Image from 'next/image';
+import styled from '@emotion/styled';
 import Link from 'next/link';
 
-import { Button, Input, Textarea } from '#components/atoms';
+import { Button, Textarea } from '#components/atoms';
 import SectionBlock from '#components/molecules/SectionBlock';
+
 
 const IndexPage = () => (
   <div
     style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 10 }}
   >
     <p>
-      <Link href='/about'>About</Link>
+      <Link href='/about'>Home</Link>
     </p>
-    <Image
-      width={49.2}
-      height={29.4}
-      src={'/images/copotter_dev_icon.png'}
-      alt='icon'
-    />
-    <Image
-      width={148}
-      height={26}
-      src={'/images/copotter_dev_logo.png'}
-      alt='logo'
-    />
-    <Button>취소 (C)</Button>
-    <Button disabled>취소 (C)</Button>
 
     <SectionBlock
       title='인기글'
       content={
         <div>
-          <p>뭘 써나가볼까요?</p>
+          <p>홈페이지 꽃단장 중 입니다.</p>
         </div>
       }
     />
-    <SectionBlock title='인기글' content='열심히 해봅시다!' />
 
-    <Input placeholder='뭐 쓸건데?' />
-    <Textarea placeholder='뭐 쓸건데?' />
+    <ButtonArea>
+      <Button disabled>취소 (C)</Button>
+      <Button>확인 (C)</Button>
+    </ButtonArea>
+
+    <Textarea placeholder='채워나갈 예정...' />
   </div>
 );
 
 export default IndexPage;
+
+const ButtonArea = styled.div`
+  display: flex;
+  gap: 12px;
+`;
