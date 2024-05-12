@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Button, Textarea } from '#components/atoms';
 import SectionBlock from '#components/molecules/SectionBlock';
 
-
 const IndexPage = () => (
   <div
     style={{ display: 'flex', flexDirection: 'column', gap: 20, padding: 10 }}

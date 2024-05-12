@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextApiRequest, NextApiResponse } from 'next';
 
 import { sampleUserData } from '../../../utils/sample-data';
@@ -9,7 +10,7 @@ const handler = (_req: NextApiRequest, res: NextApiResponse) => {
     }
 
     res.status(200).json(sampleUserData);
-  } catch (err: { message: string }) {
+  } catch (err: any) {
     res.status(500).json({ statusCode: 500, message: err.message });
   }
 };

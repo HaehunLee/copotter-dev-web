@@ -94,7 +94,7 @@ const globalStyle = ({ theme }: { theme: Theme }) => css`
 
   :root {
     /* --rt-color-white: #fff; */
-    /* --rt-color-dark: ${theme.colors.mono[400]}; */
+    /* --rt-color-dark: ${theme.colors.black}; */
     /* --rt-color-success: #8dc572; */
     /* --rt-color-error: #be6464; */
     /* --rt-color-warning: #f0ad4e; */

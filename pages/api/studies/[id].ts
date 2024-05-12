@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as fs from 'fs';
 import path from 'path';
 
@@ -23,7 +24,7 @@ const handler = (_req: NextApiRequest, res: NextApiResponse) => {
     // JSON 데이터를 API 응답으로 전송
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(jsonData);
-  } catch (err: { message: string }) {
+  } catch (err: any) {
     res.status(500).json({ statusCode: 500, message: err.message });
   }
 };
