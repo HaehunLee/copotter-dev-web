@@ -103,4 +103,17 @@ const globalStyle = ({ theme }: { theme: Theme }) => css`
 
     /** react-tooltip custom style end */
   }
+
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 20px;
+  }
 `;
